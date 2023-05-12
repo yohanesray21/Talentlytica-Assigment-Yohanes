@@ -1,87 +1,20 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './App.css';
+import TableRow from './TableRowStudent';
 
-interface TableRowProps {
-  student: string;
-  setOutputJSON: React.Dispatch<React.SetStateAction<OutputJSON>>;
-}
-
-type TableDataSelectProps = TableRowProps & {
-  aspect: string;
+type AssessmentAspectStudent = {
+  [key: string]: string;
 };
-
-const options: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const students = [1, 2];
-
-const assessment_aspect: string[] = [
-  'aspek_penilaian_1',
-  'aspek_penilaian_2',
-  'aspek_penilaian_3',
-  'aspek_penilaian_4',
-];
-
-const TableDataSelect = ({
-  setOutputJSON,
-  aspect,
-  student,
-}: TableDataSelectProps) => {
-  const handleSelectOption = (evt: React.ChangeEvent<HTMLSelectElement>) => {
-    setOutputJSON((prevOutputJSON: any) => ({
-      ...prevOutputJSON,
-      [aspect]: {
-        ...prevOutputJSON[aspect],
-        [student.toLocaleLowerCase()]: evt.target.value,
-      },
-    }));
-  };
-
-  return (
-    <td>
-      <select
-        onChange={(evt) => handleSelectOption(evt)}
-        defaultValue=""
-        required
-      >
-        <option value="" hidden>
-          Pilih Nilai
-        </option>
-        {options.map((opt) => (
-          <option value={opt} key={opt}>
-            {opt}
-          </option>
-        ))}
-      </select>
-    </td>
-  );
-};
-
-const TableRow = ({ student, setOutputJSON }: TableRowProps) => {
-  return (
-    <tr>
-      <td className="student-column">
-        <img src="/user.svg" alt="" width={24} />
-        {student}
-      </td>
-      {assessment_aspect.map((aspect) => (
-        <TableDataSelect
-          setOutputJSON={setOutputJSON}
-          aspect={aspect}
-          student={student}
-          key={aspect}
-        />
-      ))}
-    </tr>
-  );
-};
-
-type AspekPenilaian = Record<string, object>;
-
-interface OutputJSON {
+type AspekPenilaian = Record<string, AssessmentAspectStudent>;
+export interface OutputJSON {
   aspek_penilaian_1: AspekPenilaian;
   aspek_penilaian_2: AspekPenilaian;
   aspek_penilaian_3: AspekPenilaian;
   aspek_penilaian_4: AspekPenilaian;
 }
+
+const students = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
 function App() {
   const [isSubmit, setIsSubmit] = useState(false);
   const [outputJSON, setOutputJSON] = useState<OutputJSON>({
@@ -91,10 +24,6 @@ function App() {
     aspek_penilaian_4: {},
   });
 
-  useEffect(() => {
-    console.table(JSON.stringify(outputJSON));
-  }, [outputJSON]);
-
   return (
     <>
       <div style={{ display: 'flex', gap: 50 }}>
@@ -103,6 +32,7 @@ function App() {
             onSubmit={(e) => {
               e.preventDefault();
               setIsSubmit(true);
+              alert('Data Berhasil Diubah');
             }}
           >
             <table>
