@@ -29,7 +29,7 @@ https://talentlytica-assigment-yohanes.vercel.app/
 [Vercel](https://vercel.com/)
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![image](https://github.com/yohanesray21/Talentlytica-Assigment-Yohanes/assets/60679808/bf89ae61-a6c2-4022-ba0d-d2f3d2c98070)
 
 
 ## Tech Stack
