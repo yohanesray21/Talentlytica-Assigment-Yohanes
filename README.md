@@ -17,6 +17,11 @@ Clone the project
 ```bash
   git clone git@github.com:yohanesray21/Talentlytica-Assigment-Yohanes.git
 ```
+  or 
+
+```bash
+  git clone https://github.com/yohanesray21/Talentlytica-Assigment-Yohanes.git
+```
 
 Go to the project directory
 
