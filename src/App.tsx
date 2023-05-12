@@ -3,7 +3,7 @@ import './App.css';
 import TableRow from './TableRowStudent';
 
 type AssessmentAspectStudent = {
-  [key: string]: string;
+  [key: string]: number;
 };
 type AspekPenilaian = Record<string, AssessmentAspectStudent>;
 export interface OutputJSON {
