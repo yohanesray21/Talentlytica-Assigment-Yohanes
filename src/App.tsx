@@ -17,6 +17,7 @@ const students = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function App() {
   const [isSubmit, setIsSubmit] = useState(false);
+  const [submittedOutput, setSubmittedOutput] = useState({});
   const [outputJSON, setOutputJSON] = useState<OutputJSON>({
     aspek_penilaian_1: {},
     aspek_penilaian_2: {},
@@ -33,6 +34,7 @@ function App() {
               e.preventDefault();
               setIsSubmit(true);
               alert('Data Berhasil Diubah');
+              setSubmittedOutput(outputJSON);
             }}
           >
             <table>
@@ -69,7 +71,7 @@ function App() {
             }}
           >
             <h4>Output Aspek Penilaian </h4>
-            <pre>{JSON.stringify(outputJSON, null, 2)}</pre>
+            <pre>{JSON.stringify(submittedOutput, null, 2)}</pre>
           </div>
         )}
       </div>

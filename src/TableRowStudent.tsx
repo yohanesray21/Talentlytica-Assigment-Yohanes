@@ -15,8 +15,6 @@ const assessment_aspect: string[] = [
 ];
 
 const TableRowStudent = memo(({ student, setOutputJSON }: TableRowProps) => {
-  console.log('Table Row rerender');
-
   return (
     <tr>
       <td className="student-column">
