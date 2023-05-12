@@ -12,13 +12,29 @@ This is a React application designed for professors to manage their courses and 
 
 ## Installation
 
-Install my-project with npm
+Clone the project
 
 ```bash
-  npm install 
+  git clone git@github.com:yohanesray21/Talentlytica-Assigment-Yohanes.git
+```
+
+Go to the project directory
+
+```bash
   cd Talentlytica-Assigment-Yohanes
 ```
-    
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
 ## Demo
 
 https://talentlytica-assigment-yohanes.vercel.app/ 
