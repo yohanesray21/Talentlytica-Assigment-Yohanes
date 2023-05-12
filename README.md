@@ -1,5 +1,5 @@
 
-# Talentlytica-Assigment
+# Aplikasi Penilaian Mahasiswa
 
 This is a React application designed for professors to manage their courses and save their data efficiently. The application uses React library and optimizes the rendering process to minimize unnecessary re-renders.
 
