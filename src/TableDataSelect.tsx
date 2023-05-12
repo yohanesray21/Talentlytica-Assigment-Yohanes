@@ -14,7 +14,7 @@ const TableDataSelect = memo(
         ...prevOutputJSON,
         [aspect]: {
           ...prevOutputJSON[aspect],
-          [student.toLocaleLowerCase()]: evt.target.value,
+          [student.toLocaleLowerCase()]: Number(evt.target.value),
         },
       }));
     };
