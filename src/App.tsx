@@ -27,6 +27,7 @@ function App() {
 
   return (
     <>
+      <h2>Aplikasi Penilaian Talentlytica</h2>
       <div style={{ display: 'flex', gap: 50 }}>
         <div style={{ position: 'relative' }}>
           <form
